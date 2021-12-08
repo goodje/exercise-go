@@ -27,6 +27,21 @@ func arraysnslices() {
 
 	s3 := s2[:]
 	fmt.Println(s3)
+
+	// len(s), cap(s)
+
+	// arraies of arraies
+	aa := [2][2]string{{"11", "12"}, {"21", "22"}}
+	fmt.Println(aa)
+	sa := aa[0:1]
+	fmt.Println(sa)
+
+	// slices of slices
+	ss := [][]string{{"s11", "s12"}, {"s21", "s22"}}
+	fmt.Println(ss)
+	ss1 := ss[0:1]
+	fmt.Println(len(ss1), len(ss1), ss1)
+	fmt.Println(len(ss), len(ss), ss)
 }
 
 // struct
