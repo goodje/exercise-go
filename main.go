@@ -8,7 +8,23 @@ func main() {
 	// deferStatement()
 	// pointer()
 	// structStatement()
-	arraysnslices()
+	// arraysnslices()
+
+	// brackets
+	brackets()
+
+}
+
+func brackets() {
+	v := 1
+	v2 := "a"
+	fmt.Printf("v=%v, v2=%v\n", v, v2)
+	{
+		v := 2
+		v2 = "b"
+		fmt.Printf("v=%v, v2=%v\n", v, v2)
+	}
+	fmt.Printf("v=%v, v2=%v\n", v, v2)
 }
 
 func arraysnslices() {
