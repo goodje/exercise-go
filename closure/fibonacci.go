@@ -1,4 +1,4 @@
-package main
+package closure
 
 import "fmt"
 
@@ -26,7 +26,7 @@ func fibonacci() func() int {
 	}
 }
 
-func main() {
+func main1() {
 	f := fibonacci()
 	for i := 0; i < 10; i++ {
 		fmt.Println(f())
