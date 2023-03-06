@@ -1,18 +1,16 @@
 package dp
 
-import "sort"
-
 func knapsack(capacity int, weights, values []int) int {
 	if capacity < 1 || len(weights) < 1 {
 		return 0
 	}
 
-	// sort by weight
 	wv := make([][2]int, len(weights))
 	for i, w := range weights {
 		wv[i] = [2]int{w, values[i]}
 	}
-	sort.Sort(WVSlice(wv))
+	// sort by weight
+	// 	sort.Sort(WVSlice(wv)) // it turns out, sorting is not necessary
 
 	dp := make([][]int, len(weights))
 
