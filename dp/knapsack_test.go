@@ -21,8 +21,7 @@ func TestDP(t *testing.T) {
 
 	for _, c := range cases {
 		got := knapsack(c.c, c.w, c.v)
-		want := c.want
-		if got != want {
+		if got != c.want {
 			t.Errorf("got(%d) != want(%d), test case: capacity=%d, weights=%v, values=%v", got, c.want, c.c, c.w, c.v)
 		}
 	}
